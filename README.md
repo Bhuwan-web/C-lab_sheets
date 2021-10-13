@@ -16,4 +16,7 @@ It you know basics of git and github but haven't made any pull request or havent
 1. Fork this project it will make copy of this projects in your own repo.
 2. Clone your image repo to your pc :=> just type git clone http link given at right corner just above repo list
 3. git init=> git checkout -b <your branch name> => git add .=> git commit -m "[Added or Updated] project_name" => git push -u origin <your branch name>
-4. Open github in web and send a pull request, If every thing in your program seems ok, repo owner will merge your program to main repo and there goes your first open source contribution .
+4. Open github in web and send a pull request, If every thing in your program seems ok, repo owner will merge your program to main repo and there goes your first open source contribution 
+  # Want's to learn more about git and github???
+  If you are completely new to git and git hub, no wi=orries, i have lie sessions recordings on basics og git and github, you can try it out on from the playlist
+  https://youtube.com/playlist?list=PL1nLWvbLmIE4GS9ih1E-Ew8-BoXqS_iva
