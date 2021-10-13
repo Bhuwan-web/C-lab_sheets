@@ -8,49 +8,36 @@ void showMatrix(int m,int n,int matrix[m][n]){
     }
     printf("\n");
 }
-void sum_matrix(int m1row,int m1col,int m2row,int m2col,int m1[m1row][m1col],int m2[m2row][m2col]){
-    if(m1row == m2row && m2row == m2col)
-    {
+void matrix(int func,int m1row,int m1col,int m2row,int m2col,int m1[m1row][m1col],int m2[m2row][m2col]){
+    
     int m=m1row;
-    int n=m1col;
-    int sumMatrix[m][n];
+    int n=m2col;
+    int Matrix[m][n];
+    
     for(int row=0;row<m;row++){
         for(int column=0;column<n;column++){
-            sumMatrix[row][column]=m1[row][column]+m2[row][column];
-        }
-    }
-    showMatrix(m,n,sumMatrix);
-    }
-}
-void diff_matrix(int m1row,int m1col,int m2row,int m2col,int m1[m1row][m1col],int m2[m2row][m2col]){
-    if(m1row == m2row && m2row == m2col)
-    {
-    int m=m1row;
-    int n=m1col;
-    int diffMatrix[m][n];
-    for(int row=0;row<m;row++){
-        for(int column=0;column<n;column++){
-            diffMatrix[row][column]=m1[row][column]-m2[row][column];
-        }
-    }
-    showMatrix(m,n,diffMatrix);
-    }
-}
-void matrix_multiplication(int m1row,int m1col,int m2row,int m2col,int m1[m1row][m1col],int m2[m2row][m2col]){
-    if(m1col==m2row){
-        int m=m1row,n=m2col;
-        int muxMatrix[m1row][m2col];
-        for(int row=0;row<m1row;row++){
-            for(int column=0;column<m1col;column++){
+            if(m1row == m2row && m2row == m2col)
+            {
+            if(func==1){
+                Matrix[row][column]=m1[row][column]+m2[row][column];
+            }
+            else if(func==2){
+                Matrix[row][column]=m1[row][column]-m2[row][column];
+            }
+            else {
+            }
+            }
+            if(func==3 && m1col==m2row){
                 int sums=0;
                 for(int val=0;val<m1col;val++){
                     sums+=m1[row][val]*m2[val][column];
                 }
-                muxMatrix[row][column]=sums;
+                Matrix[row][column]=sums;
             }
         }
-        showMatrix(m,n,muxMatrix);
-    } 
+        
+    }
+    showMatrix(m,n,Matrix);
 }
 
 int main(){
@@ -88,11 +75,17 @@ int main(){
     }
 
     printf("\n\n");
+    //Attention Please
+    //  func value will determine if it will go for addition ,subtraction or multiplication
+    //      1.Addition
+    //      2.Subtraction
+    //      3.Multiplication
+    int func=0;
 
     printf("The sum of two matricecs are :");
-    sum_matrix(m1row,m1col,m2row,m2col,matrix1,matrix2);
+    matrix(1,m1row,m1col,m2row,m2col,matrix1,matrix2);
     printf("The difference of two matrices are: ");
-    diff_matrix(m1row,m1col,m2row,m2col,matrix1,matrix2);
+    matrix(2,m1row,m1col,m2row,m2col,matrix1,matrix2);
     printf("The matrix multiplication : ");
-    matrix_multiplication(m1row,m1col,m2row,m2col,matrix1,matrix2);
+    matrix(3,m1row,m1col,m2row,m2col,matrix1,matrix2);
 }
