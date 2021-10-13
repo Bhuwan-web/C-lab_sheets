@@ -5,7 +5,7 @@ If this file is any helpful to you, a star for this project will be highly appre
 
 # Want to Contribute ??
 if you want to contribute to this repo, I am ready to accept PR's just have to take few point's in consideration
-get questions from [This link](url,"https://docs.google.com/document/d/17XLhTKT8GGUxwNS8g3-e3KL6jFP5bz4X/edit")
+get questions from [This link](https://docs.google.com/document/d/17XLhTKT8GGUxwNS8g3-e3KL6jFP5bz4X/edit)
 1. The file name whould have atleast three dots(.) including one for extention
 2. The name of program should have qestion no.(index) value, program name and .c extention
 3. other than c project's won't be merged to the program 
