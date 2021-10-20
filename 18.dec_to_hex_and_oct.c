@@ -21,6 +21,7 @@ void dec_to_any(int num,int base){
     }
     hex_val[i]='\0';
     char temp;
+    
     int len=(strlen(hex_val)-1);
     for(int i=0,n=len;i<=n/2;i++,n--){
         temp=hex_val[i];
