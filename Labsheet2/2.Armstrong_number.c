@@ -17,4 +17,5 @@ for(int i=1;i<=500;i++){
     printf("%d : %d\n",i,sum);
     }
 }
+
 }
