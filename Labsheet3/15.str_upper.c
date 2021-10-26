@@ -4,7 +4,7 @@ int main(){
     printf("Enter a word: ");
     scanf("%s",word);
     for(int i=0;word[i]!='\0';i++){
-        if(word[i]-32>64)
+        if(word[i]-32>='A')
             word[i]=word[i]-32;
     }
     printf("%s\n",word);
