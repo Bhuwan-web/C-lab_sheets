@@ -8,17 +8,17 @@ int main(){
         for(int j=0;word[i+j+1]!='\0';j++){
             char temp=word[j];
             word[j]=word[j+1];
-            word[j+1]=temp
+            word[j+1]=temp;
         }
     }
     rev[i]='\0';
 
 
     for(int i=0;word[i]!='\0';i++){
-        if(word[i]==rev[i]){
-            printf("The string is a palindrome\n");
+        if(word[i]!=rev[i]){
+            printf("The string is not a palindrome\n");
             return 0;
         }
     }
-    printf("The string is not a palindrome");
+    printf("The string is a palindrome");
 }
